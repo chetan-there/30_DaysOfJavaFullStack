@@ -1,5 +1,7 @@
 package com.ct.day4;
 
+import java.util.Arrays;
+
 public class ArraysBasic {
 	public static void main(String[] args) {
 		
@@ -42,6 +44,14 @@ public class ArraysBasic {
 		for(int a3: arr3) {
 			System.out.println(a3);
 		}
+		
+		int[] arr = Arrays.stream(arr2)
+				.boxed()
+				.sorted()
+				.mapToInt(Integer::intValue)
+				.toArray();
+		
+		System.out.println(Arrays.toString(arr));
 		
 		
 	}
